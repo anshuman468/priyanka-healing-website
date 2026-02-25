@@ -10,31 +10,31 @@ async function seedDatabase() {
     await storage.createGalleryItem({
       title: "Spiritual Cleanse Certificate",
       description: "Certification in profound energy cleansing.",
-      imageUrl: "https://images.unsplash.com/photo-1544928147-79a2dbc1f389?q=80&w=600",
+      imageUrl: "/images/cert1.jpg",
       category: "certificate"
     });
     await storage.createGalleryItem({
       title: "Reiki Grandmaster Certification",
       description: "Advanced certification as a Reiki Grandmaster.",
-      imageUrl: "https://images.unsplash.com/photo-1507692049790-de58290a4334?q=80&w=600",
+      imageUrl: "/images/cert2.jpg",
       category: "certificate"
     });
     await storage.createGalleryItem({
       title: "Access Bars Healing Session",
       description: "A transformative session for mental clarity.",
-      imageUrl: "https://images.unsplash.com/photo-1519834785169-98be25ec3f84?q=80&w=600",
+      imageUrl: "/images/work1.jpg",
       category: "work"
     });
     await storage.createGalleryItem({
       title: "Custom Protection Sigil",
       description: "Hand-crafted sigil for personal protection and grounding.",
-      imageUrl: "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=600",
+      imageUrl: "/images/work2.jpg",
       category: "work"
     });
     await storage.createGalleryItem({
       title: "Crystal Healing Grid",
       description: "Harmonizing energies using sacred geometry and crystals.",
-      imageUrl: "https://images.unsplash.com/photo-1522228115018-d838bcce5c3a?q=80&w=600",
+      imageUrl: "/images/work3.jpg",
       category: "work"
     });
   }
