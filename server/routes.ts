@@ -76,6 +76,11 @@ export async function registerRoutes(
     try {
       const input = api.contact.create.input.parse(req.body);
       const message = await storage.createContactMessage(input);
+      
+      // For now, we log it. Once the email integration is connected, 
+      // we can add the actual sending logic here.
+      console.log(`New contact message for jinaborah2016@gmail.com:`, input);
+
       res.status(201).json(message);
     } catch (err) {
       if (err instanceof z.ZodError) {
