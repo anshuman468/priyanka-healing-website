@@ -144,7 +144,7 @@ export function Contact() {
                     Instagram
                   </p>
                   <a
-                    href="https://instagram.com/yourusername"
+                    href="https://instagram.com/priya_accessbars_reiki_gm"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground font-medium hover:text-primary transition-colors"
