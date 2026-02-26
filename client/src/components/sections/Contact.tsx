@@ -7,7 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Instagram } from "lucide-react";
 import {
   Form,
   FormControl,
@@ -16,7 +16,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-
 import emailjs from "@emailjs/browser";
 
 export function Contact() {
@@ -51,13 +50,12 @@ export function Contact() {
         });
         form.reset();
       })
-      .catch((error) => {
+      .catch(() => {
         toast({
           title: "Submission Failed",
           description: "Something went wrong. Please try again later.",
           variant: "destructive",
         });
-        console.error(error);
       });
   };
 
@@ -70,7 +68,7 @@ export function Contact() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Left Side */}
+          {/* LEFT SIDE */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -93,6 +91,7 @@ export function Contact() {
             </p>
 
             <div className="space-y-6">
+              {/* Email */}
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                   <Mail className="w-5 h-5" />
@@ -107,6 +106,7 @@ export function Contact() {
                 </div>
               </div>
 
+              {/* Phone */}
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                   <Phone className="w-5 h-5" />
@@ -119,6 +119,7 @@ export function Contact() {
                 </div>
               </div>
 
+              {/* Location */}
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                   <MapPin className="w-5 h-5" />
@@ -132,10 +133,30 @@ export function Contact() {
                   </p>
                 </div>
               </div>
+
+              {/* Instagram */}
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  <Instagram className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground font-medium">
+                    Instagram
+                  </p>
+                  <a
+                    href="https://instagram.com/yourusername"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground font-medium hover:text-primary transition-colors"
+                  >
+                    @priya_accessbars_reiki_gm
+                  </a>
+                </div>
+              </div>
             </div>
           </motion.div>
 
-          {/* Right Side Form */}
+          {/* RIGHT SIDE FORM */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
